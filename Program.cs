@@ -1,4 +1,10 @@
 ﻿// Get input from user, then reply with something
-Console.WriteLine("Hi, please enter your name");
+
+
+string name = "Stian";
+
+Console.WriteLine(name);
+
+
 
 Console.ReadLine();
