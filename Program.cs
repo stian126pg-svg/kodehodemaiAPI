@@ -1,4 +1,26 @@
-﻿// Console based to-do list app (CLI-app) Command Line Interface
+﻿// Collections (objects, lists, arrays and such structures) in C#
+// In JS we could
+// let todolist = ["task", "another task", "osv"]
+
+// In C#
+List<string> todolist = new List<string>();
+
+todolist.Add("Eat");
+todolist.Add("Sleep");
+todolist.Add("Code");
+
+// Loops in (forof array)
+// forof (let element of array) etc...
+
+// In C#
+foreach (var Task in todolist)
+{
+    Console.WriteLine(Task);
+}
+
+
+
+// Console based to-do list app (CLI-app) Command Line Interface
 
 // I. Show user initial UI menu
 // To-Do list menu:
@@ -14,14 +36,34 @@ Console.WriteLine("2. List all tasks");
 Console.WriteLine("3. Remove a task");
 Console.WriteLine("4. Exit interface");
 
-// II. Await user input
+
+bool running = true;
+
+// II. Await user input (in an infinite loop)
+while(running)
+{
+    
 string choice = Console.ReadLine();
 
 Console.WriteLine("User chose: " + choice);
 
-if (true)
-{ // Curly brackets must be on a new line, or else .net developers will be SEVERELY disappointed. And so will I.
+    if (choice == "1")
+    {
+        
+    }
 
-// Nothing here
-    // Code here
+    else if (choice == "2")
+    {
+        
+    }
+
+    else if (choice == "3")
+    {
+        
+    }
+
+    else if (choice == "4")
+    {
+        running = false;
+    }
 }
