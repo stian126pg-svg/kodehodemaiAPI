@@ -1,17 +1,4 @@
-﻿
-
-
-
-
-// Collections (objects, lists, arrays and such structures) in C#
-// In JS we could
-// let todolist = ["task", "another task", "osv"]
-
-// Loops in (forof array)
-// forof (let element of array) etc...
-
-
-// Console based to-do list app (CLI-app) Command Line Interface
+﻿// Console based to-do list app (CLI-app) Command Line Interface
 
 // Data related things
 
@@ -20,17 +7,7 @@ List<string> todolist = new List<string>();
 todolist.Add("Eat");
 todolist.Add("Sleep");
 todolist.Add("Code");
-
-// I. Show user initial UI menu
-
-// To-Do list menu:
-// 1. Add Task
-// 2. List all Tasks
-// 3. Remove a Task
-// 4. Exit interface
-
-
-
+//
 bool running = true;
 
 // II. Await user input (in an infinite loop)
