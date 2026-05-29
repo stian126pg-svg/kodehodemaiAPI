@@ -21,6 +21,7 @@ todolist.Add("Sleep");
 todolist.Add("Code");
 
 // I. Show user initial UI menu
+
 // To-Do list menu:
 // 1. Add Task
 // 2. List all Tasks
