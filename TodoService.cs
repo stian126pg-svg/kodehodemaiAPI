@@ -11,4 +11,8 @@ class TodoService
     {
         return todolist;
     }
+    public void DeleteTodo()
+    {
+        // Not yet implemented
+    }
 }

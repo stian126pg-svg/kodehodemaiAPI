@@ -51,20 +51,18 @@ void ShowMenu()
 void AddTask()
 {
     Console.WriteLine("Enter your task: ");
-    // Create a new instance of TodoItem
-    // TodoItem newTodo = new TodoItem();
-    // Put data in the new todo
-    // Invoke AddTodo method from todoService instance:
-    todoService.AddTodo(Console.ReadLine())
-
-   // todolist.Add(newTodo); 
+    todoService.AddTodo(Console.ReadLine());
 }
 
 void ListAllTasks()
 {
-    foreach (TodoItem Task in todolist)
+    Console.WriteLine();
+    // Get the todolist items from the service and then structure them here:
+    List<TodoItem> todos = todoService.GetAllTodos();
+
+    foreach (TodoItem task in todoService.GetAllTodos)
     {
-        Console.WriteLine(Task.TaskName);
+        Console.WriteLine(task.TaskName);
     }
 }
 
