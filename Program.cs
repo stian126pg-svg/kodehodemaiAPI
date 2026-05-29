@@ -15,6 +15,11 @@ List<TodoItem> todolist = new List<TodoItem>();
 // Add a few items:
 //todolist.Add(new TodoItem());
 //
+
+
+
+
+
 bool running = true;
 
 while(running)
@@ -71,9 +76,9 @@ void AddTask()
 
 void ListAllTasks()
 {
-    foreach (var Task in todolist)
+    foreach (TodoItem Task in todolist)
     {
-        Console.WriteLine(Task);
+        Console.WriteLine(Task.TaskName);
     }
 }
 
