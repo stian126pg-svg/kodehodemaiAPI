@@ -1,24 +1,6 @@
 ﻿// Console based to-do list app (CLI-app) Command Line Interface
-// Data related things
-
-
-// Create a new variable of type "TodoItem"
-// And name it "todo"
-// Then use the "new TodoItem()" to produce a new instance of a todoitem
-TodoItem todo = new TodoItem();
-
-todo.TaskName = "eat";
-
-
 
 List<TodoItem> todolist = new List<TodoItem>();
-// Add a few items:
-//todolist.Add(new TodoItem());
-//
-
-
-
-
 
 bool running = true;
 
@@ -47,7 +29,6 @@ while(running)
         ExitTodoApp();
     }
 }
-
 
 void ShowMenu()
 {
