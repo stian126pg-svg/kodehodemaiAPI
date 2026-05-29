@@ -1,24 +1,29 @@
 ﻿// Console based to-do list app (CLI-app) Command Line Interface
-
 // Data related things
 
-List<string> todolist = new List<string>();
 
-todolist.Add("Eat");
-todolist.Add("Sleep");
-todolist.Add("Code");
+// Create a new variable of type "TodoItem"
+// And name it "todo"
+// Then use the "new TodoItem()" to produce a new instance of a todoitem
+TodoItem todo = new TodoItem();
+
+todo.TaskName = "eat";
+
+
+
+List<TodoItem> todolist = new List<TodoItem>();
+// Add a few items:
+//todolist.Add(new TodoItem());
 //
 bool running = true;
 
-// II. Await user input (in an infinite loop)
 while(running)
 {
-
-ShowMenu(); // Show the menu
+    ShowMenu(); // Show the menu
     
-string choice = Console.ReadLine();
+    string choice = Console.ReadLine();
 
-Console.WriteLine("User chose: " + choice);
+    Console.WriteLine("User chose: " + choice);
 
     if (choice == "1") // 1. Add task
     {
@@ -54,13 +59,19 @@ void ShowMenu()
 void AddTask()
 {
     Console.WriteLine("Enter your task: ");
-    string newTodo = Console.ReadLine();
+    // Create a new instance of TodoItem
+    TodoItem newTodo = new TodoItem();
+    // Put data in the new todo
+    newTodo.TaskName = Console.ReadLine();
+
+
+
     todolist.Add(newTodo); 
 }
 
 void ListAllTasks()
 {
-        foreach (var Task in todolist)
+    foreach (var Task in todolist)
     {
         Console.WriteLine(Task);
     }
