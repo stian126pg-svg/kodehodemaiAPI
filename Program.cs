@@ -41,6 +41,7 @@ Console.WriteLine("1. Add task");
 Console.WriteLine("2. List all tasks");
 Console.WriteLine("3. Remove a task");
 Console.WriteLine("4. Exit interface");
+Console.WriteLine("Enter an option: ");
     
 string choice = Console.ReadLine();
 
