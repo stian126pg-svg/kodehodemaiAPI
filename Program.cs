@@ -2,13 +2,13 @@
 
 // SaaS - Software as a Service
 // Separation of Concerns
+// Create an instance of the TodoService
+TodoService todoService = new TodoService();
 
 
 
 
-List<TodoItem> todolist = new List<TodoItem>();
-
-bool running = true;
+bool running = true; // UI
 
 while(running)
 {
@@ -52,13 +52,12 @@ void AddTask()
 {
     Console.WriteLine("Enter your task: ");
     // Create a new instance of TodoItem
-    TodoItem newTodo = new TodoItem();
+    // TodoItem newTodo = new TodoItem();
     // Put data in the new todo
-    newTodo.TaskName = Console.ReadLine();
+    // Invoke AddTodo method from todoService instance:
+    todoService.AddTodo(Console.ReadLine())
 
-
-
-    todolist.Add(newTodo); 
+   // todolist.Add(newTodo); 
 }
 
 void ListAllTasks()
