@@ -1,5 +1,11 @@
 ﻿// Console based to-do list app (CLI-app) Command Line Interface
 
+// SaaS - Software as a Service
+// Separation of Concerns
+
+
+
+
 List<TodoItem> todolist = new List<TodoItem>();
 
 bool running = true;
