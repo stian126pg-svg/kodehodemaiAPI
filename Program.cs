@@ -14,6 +14,8 @@
 // Console based to-do list app (CLI-app) Command Line Interface
 
 // Data related things
+using System.Reflection.Metadata.Ecma335;
+
 List<string> todolist = new List<string>();
 
 todolist.Add("Eat");
@@ -35,13 +37,8 @@ bool running = true;
 // II. Await user input (in an infinite loop)
 while(running)
 {
-Console.WriteLine("To-Do list menu");
 
-Console.WriteLine("1. Add task");
-Console.WriteLine("2. List all tasks");
-Console.WriteLine("3. Remove a task");
-Console.WriteLine("4. Exit interface");
-Console.WriteLine("Enter an option: ");
+    ShowMenu();
     
 string choice = Console.ReadLine();
 
@@ -49,10 +46,8 @@ Console.WriteLine("User chose: " + choice);
 
     if (choice == "1") // 1. Add task
     {
-        Console.WriteLine("Enter your task: ");
-        string newTodo = Console.ReadLine();
+        AddTask();
     }
-
     else if (choice == "2") // 2. List all tasks
     {
         foreach (var Task in todolist)
@@ -60,14 +55,32 @@ Console.WriteLine("User chose: " + choice);
             Console.WriteLine(Task);
         }
     }
-
     else if (choice == "3")
     {
         
     }
-
     else if (choice == "4")
     {
         running = false;
     }
+}
+
+
+void ShowMenu()
+{
+    Console.WriteLine();
+    Console.WriteLine("To-Do list menu");
+
+    Console.WriteLine("1. Add task");
+    Console.WriteLine("2. List all tasks");
+    Console.WriteLine("3. Remove a task");
+    Console.WriteLine("4. Exit interface");
+    Console.WriteLine("Enter an option: "); 
+}
+
+void AddTask()
+{
+    Console.WriteLine("Enter your task: ");
+    string newTodo = Console.ReadLine();
+    todolist.Add(newTodo); 
 }
