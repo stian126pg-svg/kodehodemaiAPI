@@ -14,7 +14,6 @@
 // Console based to-do list app (CLI-app) Command Line Interface
 
 // Data related things
-using System.Reflection.Metadata.Ecma335;
 
 List<string> todolist = new List<string>();
 
@@ -38,7 +37,7 @@ bool running = true;
 while(running)
 {
 
-    ShowMenu();
+ShowMenu(); // Show the menu
     
 string choice = Console.ReadLine();
 
@@ -50,18 +49,15 @@ Console.WriteLine("User chose: " + choice);
     }
     else if (choice == "2") // 2. List all tasks
     {
-        foreach (var Task in todolist)
-        {
-            Console.WriteLine(Task);
-        }
+        ListAllTasks();
     }
-    else if (choice == "3")
+    else if (choice == "3") // 3. Delete a task
     {
-        
+        DeleteTask();
     }
-    else if (choice == "4")
+    else if (choice == "4") // 4. Exit interface
     {
-        running = false;
+        ExitTodoApp();
     }
 }
 
@@ -83,4 +79,22 @@ void AddTask()
     Console.WriteLine("Enter your task: ");
     string newTodo = Console.ReadLine();
     todolist.Add(newTodo); 
+}
+
+void ListAllTasks()
+{
+        foreach (var Task in todolist)
+    {
+        Console.WriteLine(Task);
+    }
+}
+
+void DeleteTask()
+{
+    
+}
+
+void ExitTodoApp()
+{
+    running = false;
 }
